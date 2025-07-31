@@ -25,12 +25,13 @@ const TodoList = () => {
   return (
     <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg bg-gradient-to-l from-gray-800 to-sky-500">
       <h1 className="text-2xl font-bold mb-4 text-center text-white">To Do List</h1>
-      <div className="flex gap-2 mb-4">
+      <div className="flex gap-2 mb-4 sm:flex-col">
         <input
           type="text"
           className="flex-1 border border-gray-300 rounded px-3 py-2 bg-transparent focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder:text-black focus:text-white"
           placeholder="Tambahkan tugas..."
           value={input}
+          maxLength={25}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && addTodo()}
         />

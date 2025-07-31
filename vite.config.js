@@ -1,8 +1,8 @@
+// vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
 export default defineConfig({
+  base: '/react-tailwind-todolist/', // <-- HARUS sesuai dengan nama repo kamu
   plugins: [react()],
-  base: '/react-tailwind-todolist/'
 })
